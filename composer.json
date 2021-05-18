@@ -1,0 +1,29 @@
+{
+  "name": "door4/magento2-customer-prefix-patch",
+  "description": "Works around issue in Magento 2.4.2 where prefixes in Customer Addresses are being returned as integers",
+  "version": "1.0.0",
+  "config": {
+    "sort-packages": true
+  },
+  "authors": [
+    {
+      "name": "Dan Beckett",
+      "email": "dan.beckett@door4.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "~7.4",
+    "magento/framework": "102.0.*",
+    "magento/module-backend": "101.0.*"
+  },
+  "type": "magento2-module",
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Door4\\CustomerPrefixPatch\\": ""
+    }
+  }
+}
