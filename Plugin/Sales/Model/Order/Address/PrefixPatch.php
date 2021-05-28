@@ -5,7 +5,7 @@ use Magento\Customer\Model\Options;
 
 class PrefixPatch {
 
-    protected Options $options;
+    protected $options;
 
     public function __construct(
         Options $options
