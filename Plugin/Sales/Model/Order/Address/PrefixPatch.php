@@ -15,7 +15,7 @@ class PrefixPatch {
 
     public function afterGetData(Address $subject, $result)
     {
-        if (is_array($result) && (!empty($result['prefix']) || $result['prefix'] === "0")) {
+        if (is_array($result) && array_key_exists('prefix', $result) && (!empty($result['prefix']) || $result['prefix'] === "0")) {
             $result['prefix'] = $this->formatPrefix($result['prefix']);
         }
         return $result;
