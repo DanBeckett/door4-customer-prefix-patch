@@ -1,7 +1,11 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <type name="Magento\Sales\Model\Order\Address">
-        <plugin name="patch_prefix_integers"
+        <plugin name="patch_prefix_integers_order"
                 type="Door4\CustomerPrefixPatch\Plugin\Sales\Model\Order\Address\PrefixPatch" />
+    </type>
+    <type name="Magento\Quote\Model\Quote\Address">
+        <plugin name="patch_prefix_integers_quote"
+                type="Door4\CustomerPrefixPatch\Plugin\Quote\Model\Quote\Address\PrefixPatch" />
     </type>
 </config>
